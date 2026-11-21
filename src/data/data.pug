@@ -1,1 +1,106 @@
-//- Дані секцій (масиви об'єктів) - наповнимо в Завданні 2
+//- Дані секцій лендінгу (масиви об'єктів)
+-
+  const navLinks = [
+    { href: '#top', text: 'Home', active: true },
+    { href: '#about', text: 'About us' },
+    { href: '#works', text: 'Our works' },
+    { href: '#journal', text: 'Journal' },
+    { href: '#contact', text: 'Contact' }
+  ]
+
+  const contacts = {
+    email: 'hello@keepsake.agency',
+    phone: '+44 20 7946 0920'
+  }
+
+  const socials = [
+    { id: 'rss', label: 'RSS' },
+    { id: 'f', label: 'Facebook' },
+    { id: 'tw', label: 'Twitter' },
+    { id: 'dr', label: 'Dribbble' },
+    { id: 'p', label: 'Pinterest' }
+  ]
+
+  const filters = [
+    { id: 'all', label: 'All' },
+    { id: 'branding', label: 'Branding' },
+    { id: 'identity', label: 'Identity' },
+    { id: 'print', label: 'Print' },
+    { id: 'web', label: 'Web' },
+    { id: 'motion', label: 'Motion' }
+  ]
+
+  const works = [
+    { title: 'Mockup Tag', category: 'branding', image: 'work-1', alt: 'Mockup tag branding project' },
+    { title: 'Piece Paper', category: 'print', image: 'work-2', alt: 'Piece Paper print project' },
+    { title: 'Vinyl Branding', category: 'identity', image: 'work-3', alt: 'Vinyl branding identity project' },
+    { title: 'Editorial Print', category: 'print', image: 'work-4', alt: 'Editorial print project' },
+    { title: 'Profile UI', category: 'web', image: 'work-5', alt: 'Profile UI web project' },
+    { title: 'Brand Assets', category: 'branding', image: 'work-6', alt: 'Brand assets branding project' },
+    { title: 'WallSt Identity', category: 'identity', image: 'work-7', alt: 'WallSt identity project' },
+    { title: 'Studio Website', category: 'web', image: 'work-8', alt: 'Studio website project' },
+    { title: 'Motion Reel', category: 'motion', image: 'work-9', alt: 'Motion reel project' }
+  ]
+
+  const services = [
+    { icon: 'web', title: 'Web design', text: 'Responsive sites and product interfaces that look sharp on every screen.' },
+    { icon: 'motion', title: 'Motion video', text: 'Explainers, logo animations and social clips that bring brands to life.' },
+    { icon: 'print', title: 'Print design', text: 'Posters, packaging and stationery prepared to be printed right.' },
+    { icon: 'heart', title: 'Illustration', text: 'Custom illustrations and icon sets in a style that is yours alone.' }
+  ]
+
+  const stats = [
+    { number: '120+', label: 'Projects done' },
+    { number: '8', label: 'Years in craft' },
+    { number: '64', label: 'Happy clients' },
+    { number: '15', label: 'Design awards' }
+  ]
+
+  const journal = [
+    { date: 'Oct 13, 2026', category: 'Identity', title: 'Sollicitudin tortor inceptos', image: 'journal-1' },
+    { date: 'Oct 23, 2026', category: 'Branding', title: 'Amet inceptos fringilla fusce', image: 'journal-2' },
+    { date: 'Sep 19, 2026', category: 'Identity', title: 'Cursus malesuada justo', image: 'journal-3' },
+    { date: 'Sep 27, 2026', category: 'Branding', title: 'Ornare cursus bibendum purus', image: 'journal-4' }
+  ]
+
+  const journalExcerpt = 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes.'
+
+  const clients = [
+    { id: 'nordly', name: 'NORDLY' },
+    { id: 'halcyon', name: 'Halcyon' },
+    { id: 'arco', name: 'ARCO' },
+    { id: 'pinewood', name: 'pinewood' },
+    { id: 'vela', name: 'VELA' },
+    { id: 'ostra', name: 'ostra' }
+  ]
+
+  const testimonial = {
+    text: 'Keepsake turned a vague brief into a brand we are proud of. The team was fast, honest about trade-offs and obsessed with the details.',
+    initials: 'OM',
+    name: 'Olena Marchenko',
+    role: 'Marketing Lead, Nordly',
+    slides: 3
+  }
+
+  const footerColumns = [
+    {
+      title: 'Studio',
+      links: [
+        { href: '#about', text: 'About us' },
+        { href: '#works', text: 'Our works' },
+        { href: '#journal', text: 'Journal' },
+        { href: '#top', text: 'Careers' },
+        { href: '#contact', text: 'Contact' }
+      ]
+    },
+    {
+      title: 'Services',
+      links: [
+        { href: '#about', text: 'Web design' },
+        { href: '#about', text: 'Motion video' },
+        { href: '#about', text: 'Print design' },
+        { href: '#about', text: 'Illustration' },
+        { href: '#about', text: 'Brand strategy' }
+      ]
+    }
+  ]

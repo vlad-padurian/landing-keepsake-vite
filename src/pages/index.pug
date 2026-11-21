@@ -1,10 +1,15 @@
 extends ../layouts/main
 
+block title
+  title Keepsake | Digital &amp; Branding Agency
+
 block fonts
-    include ../includes/fonts
+  include ../includes/fonts
 
 append meta
-    include ../includes/meta
+  meta(name="description" content="Keepsake - digital and branding agency specializing in web design, motion video, print and identity.")
+  meta(property="og:title" content="Keepsake | Digital & Branding Agency")
+  meta(property="og:type" content="website")
 
 block data
     include ../data/data
