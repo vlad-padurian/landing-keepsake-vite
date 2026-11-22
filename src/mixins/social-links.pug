@@ -2,5 +2,4 @@
 mixin social-links(items, modifier)
   .socials(class=modifier)
     each item in items
-      a.social-icon(href="#", class=`social-${item.id}`, aria-label=item.label)= item.id
-      
+      a.socials__link(href="#", class=`socials__link--${item.id}`, aria-label=item.label)= item.id

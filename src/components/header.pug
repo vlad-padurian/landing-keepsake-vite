@@ -1,15 +1,15 @@
 header.header
-  .container.header-container
+  .container.header__container
     include logo
 
-    input#menu-toggle.menu-toggle-input(type="checkbox", aria-controls="main-nav")
-    label.burger-btn(for="menu-toggle")
+    input#menu-toggle.menu-toggle(type="checkbox", aria-controls="main-nav")
+    label.burger(for="menu-toggle")
       span.visually-hidden Menu
-      svg.icon-burger(width="22", height="16", viewBox="0 0 22 16", fill="currentColor", aria-hidden="true")
+      svg.burger__icon.burger__icon--open(width="22", height="16", viewBox="0 0 22 16", fill="currentColor", aria-hidden="true")
         rect(y="0", width="22", height="2")
         rect(y="7", width="22", height="2")
         rect(y="14", width="22", height="2")
-      svg.icon-close(width="22", height="22", viewBox="0 0 22 22", fill="none", stroke="currentColor", stroke-width="2", aria-hidden="true")
+      svg.burger__icon.burger__icon--close(width="22", height="22", viewBox="0 0 22 22", fill="none", stroke="currentColor", stroke-width="2", aria-hidden="true")
         path(d="M3 3l16 16M19 3L3 19")
 
     include navigation

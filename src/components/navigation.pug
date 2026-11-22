@@ -1,21 +1,21 @@
 nav#main-nav.nav(aria-label="Main")
-  ul.nav-list
+  ul.nav__list
     each link in navLinks
-      li.nav-item
+      li.nav__item
         if link.active
-          a.nav-link.active(href=link.href, aria-current="page")= link.text
+          a.nav__link.nav__link--active(href=link.href, aria-current="page")= link.text
         else
-          a.nav-link(href=link.href)= link.text
+          a.nav__link(href=link.href)= link.text
 
-  .nav-actions
-    +btn('Contact us', '#contact')(class="nav-mobile-btn")
-    button.btn-favourites(type="button", aria-label="Favourites")
+  .nav__actions
+    +btn('Contact us', '#contact')(class="nav__mobile-btn")
+    button.favourites(type="button", aria-label="Favourites")
       +icon('heart', 16, 14.4)
-      span.btn-fav-text Favourites
+      span.favourites__text Favourites
 
-  .mobile-nav-info
-    p.mobile-nav-info-label Get in touch
-    p.mobile-nav-info-text= contacts.email
-    p.mobile-nav-info-text= contacts.phone
+  .nav__info
+    p.nav__info-label Get in touch
+    p.nav__info-text= contacts.email
+    p.nav__info-text= contacts.phone
 
-  +social-links(socials, 'nav-socials')
+  +social-links(socials, 'socials--nav')
