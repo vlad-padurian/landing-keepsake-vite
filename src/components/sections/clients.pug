@@ -16,6 +16,7 @@ section.clients.section
           .author-details
             p.author-name= testimonial.name
             p.author-role= testimonial.role
-        .slider-dots(aria-hidden="true")
-          each _, i in Array.from({ length: testimonial.slides })
-            span.dot(class={ active: i === 0 })
+        unless testimonial.slides < 2
+          .slider-dots(aria-hidden="true")
+            each _, i in Array.from({ length: testimonial.slides })
+              span.dot(class={ active: i === 0 })

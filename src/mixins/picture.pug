@@ -1,2 +1,7 @@
+//- +picture(name, alt, width, height, lazy)
+//- lazy = true: додає loading="lazy" (для всього, що поза першим екраном)
 mixin picture(name, alt, width, height, lazy = true)
-  img(src=`/src/assets/images/${name}.webp`, alt=alt, width=width, height=height, loading=lazy ? 'lazy' : undefined)
+  if lazy
+    img(src=`/src/assets/images/${name}.webp`, alt=alt, width=width, height=height, loading="lazy")
+  else
+    img(src=`/src/assets/images/${name}.webp`, alt=alt, width=width, height=height)

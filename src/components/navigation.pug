@@ -2,7 +2,10 @@ nav#main-nav.nav(aria-label="Main")
   ul.nav-list
     each link in navLinks
       li.nav-item
-        a.nav-link(href=link.href, class={ active: link.active }, aria-current=link.active ? 'page' : undefined)= link.text
+        if link.active
+          a.nav-link.active(href=link.href, aria-current="page")= link.text
+        else
+          a.nav-link(href=link.href)= link.text
 
   .nav-actions
     +btn('Contact us', '#contact')(class="nav-mobile-btn")
