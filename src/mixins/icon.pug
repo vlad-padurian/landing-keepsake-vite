@@ -1,0 +1,21 @@
+//- +icon(name, width, height)
+//- 'web', 'motion', 'print': інлайн-SVG послуг (кожна має свій малюнок)
+//- інші назви (heart, plus, mail, chevron): беруться зі SVG-спрайту через <use>
+mixin icon(name, width = 16, height = 16)
+  case name
+    when 'web'
+      svg(width="42" height="30" viewBox="0 0 42 30" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true")
+        rect(x="1" y="1" width="40" height="22")
+        path(d="M21 23v5M13 29h16")
+    when 'motion'
+      svg(width="40" height="32" viewBox="0 0 40 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true")
+        rect(x="1" y="7" width="38" height="24")
+        path(d="M12 1l8 6 8-6")
+    when 'print'
+      svg(width="42" height="34" viewBox="0 0 42 34" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true")
+        path(d="M11 17V1h20v16")
+        rect(x="1" y="17" width="40" height="16")
+        path(d="M11 25h20")
+    default
+      svg(width=width height=height aria-hidden="true")
+        use(href=`#icon-${name}`)
