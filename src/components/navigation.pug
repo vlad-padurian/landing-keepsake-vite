@@ -1,1 +1,18 @@
-//- TODO: наповнимо в Завданні 2
+nav#main-nav.nav(aria-label="Main")
+  ul.nav-list
+    each link in navLinks
+      li.nav-item
+        a.nav-link(href=link.href, class={ active: link.active }, aria-current=link.active ? 'page' : undefined)= link.text
+
+  .nav-actions
+    +btn('Contact us', '#contact')(class="nav-mobile-btn")
+    button.btn-favourites(type="button", aria-label="Favourites")
+      +icon('heart', 16, 14.4)
+      span.btn-fav-text Favourites
+
+  .mobile-nav-info
+    p.mobile-nav-info-label Get in touch
+    p.mobile-nav-info-text= contacts.email
+    p.mobile-nav-info-text= contacts.phone
+
+  +social-links(socials, 'nav-socials')

@@ -1,0 +1,6 @@
+//- +social-links(items, modifier): ряд іконок соцмереж із масиву items
+mixin social-links(items, modifier)
+  .socials(class=modifier)
+    each item in items
+      a.social-icon(href="#", class=`social-${item.id}`, aria-label=item.label)= item.id
+      
