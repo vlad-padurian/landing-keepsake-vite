@@ -1,17 +1,17 @@
 section.works.section#works
   .container
     each filter, i in filters
-      input.filter-radio(type="radio", name="portfolio-filter", id=`filter-${filter.id}`, checked=(i === 0))
+      input.filter-radio(class=`filter-radio--${filter.id}`, type="radio", name="portfolio-filter", id=`filter-${filter.id}`, checked=(i === 0))
 
-    .works-head
+    .works__head
       h2.section-title Our awesome works
-      .filter-chips
+      .works__chips
         each filter in filters
-          label.chip(for=`filter-${filter.id}`)= filter.label
+          label.chip(class=`chip--${filter.id}`, for=`filter-${filter.id}`)= filter.label
 
-    .works-grid
+    .works__grid
       each work, i in works
         +work-card(work, i, filters)
 
-    .load-more
-      +btn('Load more works', null, 'secondary')(class="btn-load-more")
+    .works__more
+      +btn('Load more works', null, 'secondary')(class="works__more-btn")

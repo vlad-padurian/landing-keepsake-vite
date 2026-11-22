@@ -3,20 +3,20 @@ section.clients.section
     h2.section-title Clients &amp; kind words
     p.section-desc Some of the teams that trusted us with their brands.
 
-    ul.client-logos
+    ul.clients__logos
       each client in clients
-        li.client-logo(class=`logo-${client.id}`)= client.name
+        li.clients__logo(class=`clients__logo--${client.id}`)= client.name
 
     blockquote.testimonial
-      span.quote-mark(aria-hidden="true") &ldquo;
-      p.testimonial-text= testimonial.text
-      footer.testimonial-author
-        .author-info
-          .author-avatar(aria-hidden="true")= testimonial.initials
-          .author-details
-            p.author-name= testimonial.name
-            p.author-role= testimonial.role
+      span.testimonial__mark(aria-hidden="true") &ldquo;
+      p.testimonial__text= testimonial.text
+      footer.testimonial__author
+        .testimonial__info
+          .testimonial__avatar(aria-hidden="true")= testimonial.initials
+          .testimonial__details
+            p.testimonial__name= testimonial.name
+            p.testimonial__role= testimonial.role
         unless testimonial.slides < 2
-          .slider-dots(aria-hidden="true")
+          .testimonial__dots(aria-hidden="true")
             each _, i in Array.from({ length: testimonial.slides })
-              span.dot(class={ active: i === 0 })
+              span.testimonial__dot(class={ 'testimonial__dot--active': i === 0 })

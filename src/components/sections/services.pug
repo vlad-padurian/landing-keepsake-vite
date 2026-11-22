@@ -3,10 +3,10 @@ section.services.section#about
     h2.section-title What do we do
     p.section-desc We are a small team of designers and makers who help brands look their best online and offline.
 
-    .services-grid
+    .services__grid
       each service in services
         article.service-card
-          .service-icon-bg
+          .service-card__icon
             +icon(service.icon, 34, 30.6)
-          h3.service-title= service.title
-          p.service-text= service.text
+          h3.service-card__title= service.title
+          p.service-card__text= service.text

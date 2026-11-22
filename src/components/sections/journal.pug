@@ -3,15 +3,15 @@ section.journal.section#journal
     h2.section-title From the journal
     p.section-desc Notes on process, case studies and things that inspire us.
 
-    .journal-grid
+    .journal__grid
       each post in journal
         article.journal-card
-          .journal-thumb
-            +picture(post.image, '', 150, 150)
-          .journal-content
-            p.journal-meta #{post.date} &nbsp;/&nbsp; #{post.category}
-            h3.journal-title= post.title
-            p.journal-excerpt= journalExcerpt
-            a.read-more(href="#")
-              | Read more 
+          .journal-card__thumb
+            +picture(post.image, '', 150, 150, true, 'journal-card__img')
+          .journal-card__content
+            p.journal-card__meta #{post.date} &nbsp;/&nbsp; #{post.category}
+            h3.journal-card__title= post.title
+            p.journal-card__excerpt= journalExcerpt
+            a.journal-card__more(href="#")
+              | Read more
               +icon('chevron', 5, 9)
