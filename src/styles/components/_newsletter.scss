@@ -1,0 +1,118 @@
+@use '../utils' as *;
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: rem(14);
+
+  @include mq(md) {
+    width: rem(330);
+  }
+
+  @include mq(lg) {
+    width: rem(420);
+  }
+
+  &:has(.newsletter__success:target) .newsletter__form {
+    display: none;
+  }
+
+  &__desc {
+    line-height: rem(20);
+    color: var(--color-footer-muted);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: rem(14);
+
+    &:has(.newsletter__input:user-invalid) .newsletter__error {
+      display: block;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+
+    @include mq(md) {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: rem(44);
+    padding: 0 rem(14);
+    border: 1px solid var(--color-footer-field-border);
+    background-color: var(--color-footer-field);
+    color: var(--color-white);
+
+    @include mq(md) {
+      flex: 1;
+      min-width: 0;
+    }
+
+    &::placeholder {
+      color: var(--color-footer-subtle);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-teal);
+    }
+
+    &:user-invalid {
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    height: rem(44);
+
+    @include mq(md) {
+      flex: none;
+      width: rem(103);
+    }
+  }
+
+  &__error {
+    display: none;
+    font-size: rem(12);
+    line-height: rem(16);
+    color: var(--color-accent);
+  }
+
+  &__consent {
+    display: flex;
+    align-items: center;
+    gap: rem(8);
+  }
+
+  &__checkbox {
+    width: rem(14);
+    height: rem(14);
+    accent-color: var(--color-accent);
+  }
+
+  &__consent-text {
+    font-size: rem(12);
+    line-height: rem(16);
+    color: var(--color-footer-subtle);
+    cursor: pointer;
+  }
+
+  &__success {
+    display: none;
+    line-height: rem(20);
+    color: var(--color-teal);
+
+    &:target {
+      display: block;
+    }
+  }
+}

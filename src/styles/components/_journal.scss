@@ -1,0 +1,15 @@
+@use '../utils' as *;
+
+.journal {
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+
+    @include mq(lg) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: rem(40);
+    }
+  }
+}

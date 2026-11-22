@@ -1,0 +1,19 @@
+@use '../utils' as *;
+
+.to-top {
+  @include flex-center;
+
+  position: fixed;
+  right: var(--container-padding);
+  bottom: rem(24);
+  z-index: 90;
+  width: rem(44);
+  height: rem(44);
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-accent-hover);
+  }
+}
