@@ -1,0 +1,2 @@
+mixin picture(name, alt, width, height, lazy = true)
+  img(src=`/src/assets/images/${name}.webp`, alt=alt, width=width, height=height, loading=lazy ? 'lazy' : undefined)

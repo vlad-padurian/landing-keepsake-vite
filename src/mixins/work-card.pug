@@ -1,0 +1,10 @@
+mixin work-card(work, index, categories)
+  - const category = categories.find(item => item.id === work.category)
+  article.work-card(data-category=work.category, tabindex="0")
+    +picture(work.image, work.alt, 358, 282, index > 0)
+    .hover-overlay
+      span.plus-icon(aria-hidden="true")
+        +icon('plus')
+      h3.card-title= work.title
+      .card-divider
+      span.card-cat= category.label
