@@ -1,0 +1,36 @@
+@use '../utils' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(8);
+  height: rem(40);
+  padding: 0 rem(20);
+  font-family: var(--font-oswald);
+  font-size: var(--fs-ui);
+  font-weight: 400;
+  line-height: rem(19);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &--primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-accent-hover);
+    }
+  }
+
+  &--secondary {
+    border: 1px solid var(--color-border);
+    background-color: var(--color-white);
+    color: var(--color-text-dark);
+
+    &:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+  }
+}
