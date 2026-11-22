@@ -1,0 +1,94 @@
+@use '../utils' as *;
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: rem(14);
+  margin-top: rem(14);
+  padding: rem(28) rem(24);
+  background-color: var(--color-bg-light);
+
+  @include mq(md) {
+    padding: rem(40) rem(48);
+  }
+
+  &__mark {
+    height: rem(44);
+    font-family: var(--font-open-sans);
+    font-size: rem(64);
+    font-weight: 700;
+    line-height: rem(44);
+    color: var(--color-accent);
+  }
+
+  &__text {
+    font-size: rem(16);
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+
+    @include mq(md) {
+      font-size: rem(19);
+    }
+
+    @include mq(lg) {
+      font-size: rem(22);
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: rem(14);
+  }
+
+  &__avatar {
+    @include flex-center;
+
+    width: rem(48);
+    height: rem(48);
+    border-radius: 50%;
+    background-color: var(--color-teal);
+    font-family: var(--font-oswald);
+    font-size: rem(17);
+    color: var(--color-white);
+  }
+
+  &__name {
+    font-family: var(--font-oswald);
+    font-size: rem(14);
+    line-height: rem(21);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-text-dark);
+  }
+
+  &__role {
+    margin-top: rem(2);
+    font-size: rem(13);
+    line-height: rem(18);
+    color: var(--color-muted);
+  }
+
+  &__dots {
+    display: flex;
+    gap: rem(8);
+  }
+
+  &__dot {
+    width: rem(8);
+    height: rem(4);
+    background-color: var(--color-dot);
+
+    &--active {
+      width: rem(24);
+      background-color: var(--color-accent);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use '../utils' as *;
+
+.stats {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+
+    @include mq(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    padding: rem(24) 0;
+    text-align: center;
+  }
+
+  &__number {
+    margin-bottom: rem(6);
+    font-family: var(--font-oswald);
+    font-size: rem(38);
+    font-weight: 300;
+    line-height: rem(56);
+    color: var(--color-text-dark);
+
+    @include mq(md) {
+      font-size: rem(40);
+      line-height: rem(59);
+    }
+
+    @include mq(lg) {
+      font-size: rem(48);
+      line-height: rem(71);
+    }
+  }
+
+  &__label {
+    font-family: var(--font-oswald);
+    font-size: rem(12);
+    font-weight: 400;
+    line-height: rem(18);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+}
