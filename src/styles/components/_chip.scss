@@ -1,0 +1,25 @@
+@use '../utils' as *;
+
+.chip {
+  @include flex-center;
+
+  flex-shrink: 0;
+  height: rem(34);
+  padding: 0 rem(16);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  font-family: var(--font-oswald);
+  font-size: var(--fs-ui);
+  font-weight: 400;
+  line-height: rem(18);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-text-dark);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+}

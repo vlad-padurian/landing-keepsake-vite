@@ -1,0 +1,51 @@
+@use '../utils' as *;
+
+$filters: all, branding, identity, print, web, motion;
+
+.filter-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+
+  @each $id in $filters {
+    &--#{$id}:checked ~ .works__head .chip--#{$id} {
+      border-color: var(--color-accent);
+      background-color: var(--color-accent);
+      color: var(--color-white);
+    }
+
+    &--#{$id}:focus-visible ~ .works__head .chip--#{$id} {
+      @include focus-ring;
+    }
+
+    @if $id != all {
+      &--#{$id}:checked ~ .works__grid .work-card:not([data-category='#{$id}']) {
+        display: none;
+      }
+    }
+  }
+}
+
+.filter-radio--all:checked ~ .works__grid .work-card {
+  &:nth-child(n + 6) {
+    display: none;
+  }
+
+  @include mq(md) {
+    &:nth-child(n + 6) {
+      display: block;
+    }
+
+    &:nth-child(n + 9) {
+      display: none;
+    }
+  }
+
+  @include mq(lg) {
+    &:nth-child(n + 9) {
+      display: block;
+    }
+  }
+}
