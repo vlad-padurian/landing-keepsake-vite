@@ -1,0 +1,12 @@
+@use '../utils' as *;
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.svg-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

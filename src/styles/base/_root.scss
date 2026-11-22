@@ -1,0 +1,30 @@
+@use '../utils' as *;
+
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+
+  --font-oswald: #{$font-oswald};
+  --font-open-sans: #{$font-open-sans};
+  --font-dancing-script: #{$font-dancing-script};
+
+  --container-max-width: #{$container-max-width};
+  --header-height: #{rem(64)};
+  --section-padding: #{rem(56)};
+  --container-padding: #{rem(20)};
+  --fs-ui: #{rem(12)};
+
+  @include mq(md) {
+    --header-height: #{rem(84)};
+    --section-padding: #{rem(72)};
+    --container-padding: #{rem(40)};
+    --fs-ui: #{rem(13)};
+  }
+
+  @include mq(lg) {
+    --header-height: #{rem(100)};
+    --section-padding: #{rem(90)};
+    --container-padding: #{rem(90)};
+  }
+}

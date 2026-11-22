@@ -1,0 +1,11 @@
+@use '../utils' as *;
+
+body {
+  padding-top: var(--header-height);
+  background-color: var(--color-white);
+  font-family: var(--font-open-sans);
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: rem(22);
+  color: var(--color-text);
+}
