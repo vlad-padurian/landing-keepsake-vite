@@ -1,0 +1,39 @@
+@use '../utils' as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+
+  &__mark {
+    @include flex-center;
+
+    width: rem(34);
+    height: rem(34);
+    border-radius: 50%;
+    background-color: var(--color-text-dark);
+    font-family: var(--font-dancing-script);
+    font-size: rem(22);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-white);
+
+    @include mq(md) {
+      width: rem(40);
+      height: rem(40);
+      font-size: rem(26);
+    }
+  }
+
+  &__text {
+    font-family: var(--font-dancing-script);
+    font-size: rem(22);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-text-dark);
+
+    @include mq(md) {
+      font-size: rem(26);
+    }
+  }
+}

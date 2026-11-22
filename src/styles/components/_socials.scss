@@ -1,0 +1,46 @@
+@use '../utils' as *;
+
+$social-networks: rss, f, tw, dr, p;
+
+.socials {
+  display: flex;
+  gap: rem(10);
+
+  @include mq(md) {
+    gap: rem(8);
+  }
+
+  @include mq(lg) {
+    gap: rem(10);
+  }
+
+  &--nav {
+    justify-content: center;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+
+  &__link {
+    @include flex-center;
+
+    width: rem(34);
+    height: rem(34);
+    border-radius: 50%;
+    font-size: rem(12);
+    font-weight: 700;
+    line-height: rem(16);
+    color: var(--color-white);
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    @each $network in $social-networks {
+      &--#{$network} {
+        background-color: var(--color-social-#{$network});
+      }
+    }
+  }
+}

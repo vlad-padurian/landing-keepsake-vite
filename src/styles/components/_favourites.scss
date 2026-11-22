@@ -1,0 +1,41 @@
+@use '../utils' as *;
+
+.favourites {
+  @include flex-center(rem(8));
+
+  width: 100%;
+  height: rem(40);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+  font-family: var(--font-oswald);
+  font-size: var(--fs-ui);
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  &__text {
+    @include mq(md) {
+      display: none;
+    }
+  }
+
+  @include mq(md) {
+    width: rem(36);
+    height: rem(36);
+    padding: 0;
+    border: none;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-accent-hover);
+      color: var(--color-white);
+    }
+  }
+}

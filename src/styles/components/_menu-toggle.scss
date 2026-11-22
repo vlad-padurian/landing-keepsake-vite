@@ -1,0 +1,27 @@
+@use '../utils' as *;
+
+.menu-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+
+  &:checked ~ .burger .burger__icon--open {
+    display: none;
+  }
+
+  &:checked ~ .burger .burger__icon--close {
+    display: block;
+  }
+
+  &:checked ~ .nav {
+    display: flex;
+  }
+
+  &:focus-visible ~ .burger {
+    @include focus-ring;
+  }
+}

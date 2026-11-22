@@ -1,0 +1,18 @@
+@use '../utils' as *;
+
+.burger {
+  @include flex-center;
+
+  width: rem(40);
+  height: rem(40);
+  cursor: pointer;
+  color: var(--color-text-dark);
+
+  &__icon--close {
+    display: none;
+  }
+
+  @include mq(md) {
+    display: none;
+  }
+}
