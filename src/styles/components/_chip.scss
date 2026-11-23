@@ -17,7 +17,8 @@
   white-space: nowrap;
   color: var(--color-text-dark);
   cursor: pointer;
-
+  user-select: none;
+  
   &:hover {
     border-color: var(--color-accent);
     color: var(--color-accent);
