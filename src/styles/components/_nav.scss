@@ -3,10 +3,7 @@
 .nav {
   display: none;
   position: fixed;
-  top: var(--header-height);
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: var(--header-height) 0 0 0;
   flex-direction: column;
   justify-content: space-between;
   gap: rem(24);

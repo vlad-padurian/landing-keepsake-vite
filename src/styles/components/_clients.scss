@@ -59,10 +59,7 @@ $logos: (
       &--#{$name} {
         font-family: map.get($style, family);
         font-weight: map.get($style, weight);
-
-        @if map.has-key($style, spacing) {
-          letter-spacing: map.get($style, spacing);
-        }
+        letter-spacing: map.get($style, spacing);
       }
     }
   }
