@@ -1,0 +1,4 @@
+{
+  "*.scss": ["stylelint --fix", "prettier --write"],
+  "*.{pug,js,json,md}": "prettier --write"
+}
