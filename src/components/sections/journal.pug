@@ -7,8 +7,7 @@ section.journal.section#journal
       each post in journal
         article.journal-card
           .journal-card__thumb
-            +picture(post.image, '', 150, 150, true, 'journal-card__img')
-          .journal-card__content
+            +picture(post.image, '', 150, 150, true, 'journal-card__img', '150px')          .journal-card__content
             p.journal-card__meta #{post.date} &nbsp;/&nbsp; #{post.category}
             h3.journal-card__title= post.title
             p.journal-card__excerpt= journalExcerpt

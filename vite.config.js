@@ -20,4 +20,7 @@ export default {
             '@assets': path.resolve(import.meta.dirname, 'src/assets')
         },
     },
+    build: {
+        assetsInlineLimit: 0
+    }
 }
