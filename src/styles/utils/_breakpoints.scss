@@ -5,7 +5,6 @@ $breakpoints: (
   lg: 1280px,
 );
 
-
 @mixin mq($key) {
   @media (min-width: map.get($breakpoints, $key)) {
     @content;

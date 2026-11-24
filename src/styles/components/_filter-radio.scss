@@ -21,7 +21,9 @@ $filters: all, branding, identity, print, web, motion;
     }
 
     @if $id != all {
-      &--#{$id}:checked ~ .works__grid .work-card:not([data-category='#{$id}']) {
+      &--#{$id}:checked
+        ~ .works__grid
+        .work-card:not([data-category='#{$id}']) {
         display: none;
       }
     }

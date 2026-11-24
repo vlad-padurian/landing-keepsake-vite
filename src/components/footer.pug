@@ -1,21 +1,31 @@
-footer.footer#contact
+footer#contact.footer
   .container
     .footer__top
       .newsletter
         h2.footer__heading Newsletter
         p.newsletter__desc Fresh case studies and design notes, once a month.
 
-        form.newsletter__form(action="#newsletter-success", method="get")
+        form.newsletter__form(action='#newsletter-success', method='get')
           .newsletter__row
-            label.visually-hidden(for="newsletter-email") Email address
-            input#newsletter-email.newsletter__input(type="email", name="email", placeholder="Your email address", required, aria-describedby="email-error")
-            button.btn.btn--primary.newsletter__submit(type="submit") Subscribe
+            label.visually-hidden(for='newsletter-email') Email address
+            input#newsletter-email.newsletter__input(
+              type='email',
+              name='email',
+              placeholder='Your email address',
+              required,
+              aria-describedby='email-error'
+            )
+            button.btn.btn--primary.newsletter__submit(type='submit') Subscribe
           p#email-error.newsletter__error Please enter a valid email address.
           .newsletter__consent
-            input#consent-check.newsletter__checkbox(type="checkbox", name="consent", required)
-            label.newsletter__consent-text(for="consent-check") I agree to the privacy policy
+            input#consent-check.newsletter__checkbox(
+              type='checkbox',
+              name='consent',
+              required
+            )
+            label.newsletter__consent-text(for='consent-check') I agree to the privacy policy
 
-        p#newsletter-success.newsletter__success(role="status") Thank you! You are subscribed.
+        p#newsletter-success.newsletter__success(role='status') Thank you! You are subscribed.
 
       .footer__links
         each column in footerColumns

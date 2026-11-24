@@ -1,15 +1,15 @@
-nav#main-nav.nav(aria-label="Main")
+nav#main-nav.nav(aria-label='Main')
   ul.nav__list
     each link in navLinks
       li.nav__item
         if link.active
-          a.nav__link.nav__link--active(href=link.href, aria-current="page")= link.text
+          a.nav__link.nav__link--active(href=link.href, aria-current='page')= link.text
         else
           a.nav__link(href=link.href)= link.text
 
   .nav__actions
-    +btn('Contact us', '#contact')(class="nav__mobile-btn")
-    button.favourites(type="button", aria-label="Favourites")
+    +btn('Contact us', '#contact').nav__mobile-btn
+    button.favourites(type='button', aria-label='Favourites')
       +icon('heart', 16, 14.4)
       span.favourites__text Favourites
 

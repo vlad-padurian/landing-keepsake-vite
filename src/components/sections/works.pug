@@ -1,7 +1,13 @@
-section.works.section#works
+section#works.works.section
   .container
     each filter, i in filters
-      input.filter-radio(class=`filter-radio--${filter.id}`, type="radio", name="portfolio-filter", id=`filter-${filter.id}`, checked=(i === 0))
+      input.filter-radio(
+        class=`filter-radio--${filter.id}`,
+        type='radio',
+        name='portfolio-filter',
+        id=`filter-${filter.id}`,
+        checked=i === 0
+      )
 
     .works__head
       h2.section-title Our awesome works
@@ -14,4 +20,4 @@ section.works.section#works
         +work-card(work, i, filters)
 
     .works__more
-      +btn('Load more works', null, 'secondary')(class="works__more-btn")
+      +btn('Load more works', null, 'secondary').works__more-btn

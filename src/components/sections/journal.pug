@@ -1,4 +1,4 @@
-section.journal.section#journal
+section#journal.journal.section
   .container
     h2.section-title From the journal
     p.section-desc Notes on process, case studies and things that inspire us.
@@ -7,10 +7,18 @@ section.journal.section#journal
       each post in journal
         article.journal-card
           .journal-card__thumb
-            +picture(post.image, '', 150, 150, true, 'journal-card__img', '150px')          .journal-card__content
-            p.journal-card__meta #{post.date} &nbsp;/&nbsp; #{post.category}
+            +picture(
+              post.image,
+              '',
+              150,
+              150,
+              true,
+              'journal-card__img',
+              '150px',
+            ) .journal-card__content
+            p.journal-card__meta #{ post.date } &nbsp;/&nbsp; #{ post.category }
             h3.journal-card__title= post.title
             p.journal-card__excerpt= journalExcerpt
-            a.journal-card__more(href="#")
+            a.journal-card__more(href='#')
               | Read more
               +icon('chevron', 5, 9)

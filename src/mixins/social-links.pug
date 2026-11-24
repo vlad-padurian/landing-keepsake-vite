@@ -2,4 +2,8 @@
 mixin social-links(items, modifier)
   .socials(class=modifier)
     each item in items
-      a.socials__link(href="#", class=`socials__link--${item.id}`, aria-label=item.label)= item.id
+      a.socials__link(
+        href='#',
+        class=`socials__link--${item.id}`,
+        aria-label=item.label
+      )= item.id

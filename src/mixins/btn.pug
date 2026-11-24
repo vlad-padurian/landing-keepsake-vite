@@ -3,7 +3,7 @@
 //- довільні атрибути (class, aria-label) йдуть через &attributes
 //- вкладений вміст (block) вставляється перед текстом, напр. іконка
 mixin btn(text, href, modifier = 'primary')
-  - const tag = href ? 'a' : 'button'
+  - const tag = href ? 'a' : 'button';
   #{tag}.btn(class=`btn--${modifier}`, href=href, type=href ? undefined : 'button')&attributes(attributes)
     if block
       block

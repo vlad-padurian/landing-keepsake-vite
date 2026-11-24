@@ -8,15 +8,15 @@ section.clients.section
         li.clients__logo(class=`clients__logo--${client.id}`)= client.name
 
     blockquote.testimonial
-      span.testimonial__mark(aria-hidden="true") &ldquo;
+      span.testimonial__mark(aria-hidden='true') &ldquo;
       p.testimonial__text= testimonial.text
       footer.testimonial__author
         .testimonial__info
-          .testimonial__avatar(aria-hidden="true")= testimonial.initials
+          .testimonial__avatar(aria-hidden='true')= testimonial.initials
           .testimonial__details
             p.testimonial__name= testimonial.name
             p.testimonial__role= testimonial.role
         unless testimonial.slides < 2
-          .testimonial__dots(aria-hidden="true")
+          .testimonial__dots(aria-hidden='true')
             each _, i in Array.from({ length: testimonial.slides })
               span.testimonial__dot(class={ 'testimonial__dot--active': i === 0 })
