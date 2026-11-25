@@ -13,8 +13,8 @@ const renameHtml = () => ({
   },
 });
 
-export default {
-  base: '/landing-keepsake-vite/',
+export default ({ command }) => ({
+  base: command === 'build' ? '/landing-keepsake-vite/' : '/',
   plugins: [
     vituum({
       imports: {
@@ -36,4 +36,4 @@ export default {
   build: {
     assetsInlineLimit: 0,
   },
-};
+});
